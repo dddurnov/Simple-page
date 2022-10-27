@@ -26,7 +26,14 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 85px;
+    height: 60px;
+    background: #fff;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .logo {
@@ -50,7 +57,7 @@ ul {
     line-height: 150%;
     display: flex;
     padding-left: 32px;
-    transition-duration: 300ms;
+    transition-duration: 100ms;
     
 }
 
@@ -73,7 +80,14 @@ ul {
     margin-left: 16px;
     width: 101px;
     height: 37px;
+    cursor: pointer;
 }
+
+.button>button:hover {
+    box-shadow: 0px 0px 2px 1px rgba(162,42,221,0.75);
+    background: #5620b4;
+}
+
 .button>button>a {
     color:white;
 }
@@ -138,13 +152,16 @@ ul {
     background-color: white;
     cursor: pointer;
     transition-duration: 500ms;
-}
-.btn:hover {
     background-color: #7E3AF2;
 }
 
-.btn:hover>a {
-    color:white;
+.btn>a {
+    color: #fff;
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 20px 1px rgba(162,42,221,0.75);
+    background: #5620b4;
 }
 
 
@@ -258,7 +275,6 @@ ul {
     line-height: 16px;
     display: flex;
     padding-bottom: 16px;
-
 }
 
 .trust-left>a::after {
@@ -268,6 +284,10 @@ ul {
     padding-left: 8px;
 }
 
+
+.trust-left>a:hover{
+color: #5620b4;
+}
 
 .trust-right {
     display: flex;
@@ -333,7 +353,9 @@ ul {
 
 .price-title {
     text-align: center;
-    margin-top: 192px;
+    margin-top: 96px;
+    height: 100% ;
+    padding-top: 80px;
 }
 
 .price-title>h1 {
@@ -368,6 +390,11 @@ ul {
     border-radius: 8px;
     text-align: center;
     margin: 0 auto;
+    transition-duration: 0.3s;
+}
+
+.price-card-item:hover {
+    box-shadow: 0 5px 25px 0 rgba(5, 5, 5, 0.2);
 }
 
 .price-card-item>h1 {
@@ -432,6 +459,12 @@ ul {
     color: white;
     border-radius: 8px;
     border: none;
+    cursor: pointer;
+}
+
+.price-card-item>button:hover {
+    box-shadow: 0px 0px 20px 1px rgba(162,42,221,0.75);
+    background: #5620b4;
 }
 
 .faq-major-title {
@@ -541,6 +574,12 @@ ul {
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.start-content>button:hover {
+    box-shadow: 0px 0px 20px 1px rgba(162,42,221,0.75);
+    background: #5620b4;
 }
 
 .start-content>button>a {
@@ -549,7 +588,6 @@ ul {
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
-    
 }
 
 .footer {
@@ -578,8 +616,13 @@ ul {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 100%;
     color: #6B7280;
+}
+
+.footer-ul>ul>li>a:hover {
+    border-bottom: #6B7280 solid 1px;
+    color: #555;
 }
 
 .footer-ul>ul>li {
@@ -625,3 +668,46 @@ ul {
     height: 24px;
     color: #6B7280;
 }
+
+#button {   
+    display: inline-block;   
+    background-color: #7E3AF2;   
+    width: 50px;   
+    height: 50px;   
+    text-align: center;   
+    border-radius: 4px;   
+    margin: 30px;   
+    position: fixed;   
+    bottom: 30px;   
+    right: 30px;      
+    z-index: 1000;
+    transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+
+}
+
+#button:hover {   
+    cursor: pointer;   
+    background-color: #333; 
+}
+
+#button:active {   
+    background-color: #555; 
+ } 
+
+ #button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff; 
+ } 
+
+ #button.show {
+    opacity: 1;
+    visibility: visible;
+  }
