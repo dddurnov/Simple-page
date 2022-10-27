@@ -81,6 +81,7 @@ ul {
     width: 101px;
     height: 37px;
     cursor: pointer;
+    transition-duration: 0.3s;
 }
 
 .button>button:hover {
@@ -142,7 +143,6 @@ ul {
 }
 
 .btn{
-    border: 1px solid #E5E7EB;
     border-radius: 8px;
     font-style: normal;
     font-weight: 500;
@@ -153,6 +153,7 @@ ul {
     cursor: pointer;
     transition-duration: 500ms;
     background-color: #7E3AF2;
+    border: none;
 }
 
 .btn>a {
@@ -275,6 +276,7 @@ ul {
     line-height: 16px;
     display: flex;
     padding-bottom: 16px;
+    transition-duration: 0.1s;
 }
 
 .trust-left>a::after {
@@ -460,6 +462,7 @@ color: #5620b4;
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    transition-duration: 0.5s;
 }
 
 .price-card-item>button:hover {
@@ -574,7 +577,7 @@ color: #5620b4;
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    transition-duration: 0.3s;
+    transition-duration: 0.5s;
 }
 
 .start-content>button:hover {
@@ -683,8 +686,9 @@ color: #5620b4;
     z-index: 1000;
     transition: background-color .3s, 
     opacity .5s, visibility .5s;
-  opacity: 0;
-  visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 0.5s;
 
 }
 
